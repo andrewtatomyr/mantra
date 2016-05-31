@@ -1,0 +1,89 @@
+body {
+  font-family: sans-serif;
+  background-color: #7B9A5C;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  min-height: 100%;
+  background: white;
+}
+
+header {
+  background: #F7F793;
+  padding: 20px 15px 15px 15px;
+}
+
+#login-buttons {
+  display: block;
+}
+
+h1 {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+form {
+  margin-top: 10px;
+  margin-bottom: -10px;
+}
+
+.new-message input {
+  box-sizing: border-box;
+  padding: 10px 0;
+  background: transparent;
+  border: none;
+  width: 100%;
+  padding-right: 80px;
+  font-size: 1em;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  background: white;
+}
+
+li {
+  list-style: none;
+  padding: 15px;
+  border-top: #7B9A5C solid 1px;
+}
+
+li .text {
+  margin-left: 10px;
+}
+
+header input:focus {
+  outline: 0;
+}
+
+header .location-wrapper {
+  display: inline-block;
+}
+
+header .profile-wrapper {
+  display: inline-block;
+  float: right;
+  margin-left: 5px;
+}
+
+header select {
+  background: transparent;
+}
+
+.toggle-profile {
+  cursor: pointer;
+}
+
+.date-time {
+  color: grey;
+}
