@@ -6,7 +6,6 @@ export default class Location extends Component {
   constructor(props) {
     super(props);
   }
-  //{this.props.location.locationName}
   render() {
     return (
       <option >
@@ -16,7 +15,3 @@ export default class Location extends Component {
   }
 
 }
-
-Location.propTypes = {
-  //location: PropTypes.object.isRequired
-};

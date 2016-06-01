@@ -4,12 +4,10 @@ import Message from './Message.jsx';
 class MessagesList extends React.Component {
   constructor(props) {
     super(props);
-    //console.log("[construct MessagesList]");
   }
 
   render() {
 
-    //console.log(this.props);
     return (
       <div className='postlist'>
         <ul>

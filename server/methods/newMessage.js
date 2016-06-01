@@ -6,17 +6,6 @@ import {check} from 'meteor/check';
 
 Meteor.methods({
 
-  /*
-  "user.updateProfile"(name, email) {
-    Meteor.users.update({_id: this.userId}, {
-      $set: {
-        name,
-        "emails.0.address": email
-      }
-    });
-  },
-  */
-
   "messages.insert"(text, location) {
     check(text, String);
 

@@ -1,8 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { Meteor } from 'meteor/meteor';
 
-///import { Messages } from '../api/api.js';
-
 export default class Message extends Component {
 
   render() {

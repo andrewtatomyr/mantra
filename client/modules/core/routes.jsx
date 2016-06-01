@@ -2,72 +2,27 @@ import React from 'react';
 import {mount} from 'react-mounter';
 
 import MainLayout from './components/main_layout';
-import MessagesList from './containers/messages';
-//import Post from './containers/post';
-//import NewPost from './containers/newpost';
+import MessagesList from './containers/messagesList';
 
 export default function (injectDeps, {FlowRouter}) {
   const MainLayoutCtx = injectDeps(MainLayout);
 
 
-  //console.log(MessagesList);
+  FlowRouter.route('/', {
+    name: 'messages',
+    action: function(params) {
+      mount(MainLayoutCtx);
+    }
+  });
 
 
   FlowRouter.route('/messages/:location', {
     name: 'messages',
-    action(/*{location}*/) {
-      //console.log("[LOCATION is]:", location);
-
-
-      mount(MainLayoutCtx, {
-        content: () => (<MessagesList  />)
-      });
-
-
-
-    }
-  });
-
-  FlowRouter.route('/', {
-    name: 'messages',
-    action: function(params) {
-
+    action() {
       mount(MainLayoutCtx);
 
-
     }
   });
-
-
-  /*
-
-  FlowRouter.route('/', {
-    name: 'posts.list',
-    action() {
-      mount(MainLayoutCtx, {
-        content: () => (<PostList />)
-      });
-    }
-  });
-
-  FlowRouter.route('/post/:postId', {
-    name: 'posts.single',
-    action({postId}) {
-      mount(MainLayoutCtx, {
-        content: () => (<Post postId={postId}/>)
-      });
-    }
-  });
-
-  FlowRouter.route('/new-post', {
-    name: 'newpost',
-    action() {
-      mount(MainLayoutCtx, {
-        content: () => (<NewPost/>)
-      });
-    }
-  });
-  */
 
 
 }
