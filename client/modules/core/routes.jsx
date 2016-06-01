@@ -10,17 +10,17 @@ export default function (injectDeps, {FlowRouter}) {
   const MainLayoutCtx = injectDeps(MainLayout);
 
 
-
+  //console.log(MessagesList);
 
 
   FlowRouter.route('/messages/:location', {
     name: 'messages',
-    action: function(params) {
-      console.log("[LOCATION is]:", params.location);
+    action(/*{location}*/) {
+      //console.log("[LOCATION is]:", location);
 
 
       mount(MainLayoutCtx, {
-        content: () => (<MessagesList location={params.location} />)
+        content: () => (<MessagesList  />)
       });
 
 
@@ -32,9 +32,7 @@ export default function (injectDeps, {FlowRouter}) {
     name: 'messages',
     action: function(params) {
 
-      mount(MainLayoutCtx/*, {
-        content: () => (<MessagesList />)
-      }*/);
+      mount(MainLayoutCtx);
 
 
     }

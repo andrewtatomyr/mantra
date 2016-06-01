@@ -1,4 +1,5 @@
-import MessagesList from '../components/MessagesList.jsx';
+/*
+import from '../components/MessagesList.jsx';
 import {useDeps, composeWithTracker, composeAll} from 'mantra-core';
 
 
@@ -24,3 +25,4 @@ export default composeAll(
   composeWithTracker(composer),
   useDeps()
 )(MessagesList);
+  */

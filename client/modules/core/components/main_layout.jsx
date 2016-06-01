@@ -12,11 +12,15 @@ import { createContainer } from 'meteor/react-meteor-data';
 import Message from './Message.jsx';
 
 // Location template
-import Location from './Location.jsx';
+//import Location from './Location.jsx';
+import Navigation from './Navigation.jsx';
+import NewMessage from './NewMessage.jsx';
+
 
 import AccountsUIWrapper from './AccountsUIWrapper.jsx';
 
-//*/
+/*/
+
 
 // Main component
 export default class App extends React.Component {
@@ -26,6 +30,8 @@ export default class App extends React.Component {
     this.state = {
       showProfile: false,
     };
+
+    console.log(props);
   }
 
   //*--
@@ -81,7 +87,7 @@ export default class App extends React.Component {
     ReactDOM.findDOMNode(this.refs.textInput).value = "";
   }
 
-  /*
+  //*
 
   renderMessages() {
     return this.props.messages.map((message) => (
@@ -89,7 +95,7 @@ export default class App extends React.Component {
     ));
   }
 
-  //*/
+  //*
 
   render() {
 
@@ -143,6 +149,7 @@ export default class App extends React.Component {
 
         <div>
           ---
+          {this.renderMessages()}
         </div>
 
 
@@ -156,7 +163,7 @@ export default class App extends React.Component {
 }
 
 
-//* ?
+/* ?
 
 App.propTypes = {
   messages: PropTypes.array.isRequired,
@@ -165,7 +172,7 @@ App.propTypes = {
 
 
 
-/*
+//*
 export default createContainer(() => {
 
   let location = parseInt(FlowRouter.getParam('location'));
@@ -179,4 +186,53 @@ export default createContainer(() => {
   };
 }, App);
 
+/**/
+
+//*
+
+
+
+
+const Layout = ({content = () => null }) => (
+  <div className="container">
+    <header>
+      <h1>Messaging</h1>
+
+      <div className="profile-wrapper">
+
+      </div>
+
+      <div className="profile-wrapper">
+        <AccountsUIWrapper />
+      </div>
+
+      <div className="location-wrapper">
+        <Navigation/>
+      </div>
+
+
+      <div className="new-message-wrapper">
+        <NewMessage />
+      </div>
+
+
+    </header>
+
+
+
+    <div>
+      {content()}
+    </div>
+
+
+
+
+
+  </div>
+);
+
+
+
+
+export default Layout;
 //*/
