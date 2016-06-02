@@ -16,11 +16,10 @@ export default function (injectDeps, {FlowRouter}) {
   });
 
 
-  FlowRouter.route('/messages/:location', {
+  FlowRouter.route('/messages/:userLocation', {
     name: 'messages',
     action() {
       mount(MainLayoutCtx);
-
     }
   });
 

@@ -6,7 +6,7 @@ import {check} from 'meteor/check';
 
 Meteor.methods({
 
-  "messages.insert"(text, location) {
+  "messages.insert"(text, userLocation) {
     check(text, String);
 
     if (!this.userId) {
@@ -18,7 +18,7 @@ Meteor.methods({
       createdAt: new Date(),
       author: this.userId,
       username: Meteor.users.findOne(this.userId).name,
-      location,
+      userLocation,
     });
   },
 

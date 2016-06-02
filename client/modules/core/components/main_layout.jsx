@@ -1,4 +1,3 @@
-//*
 
 import React, { Component, PropTypes }  from 'react';
 import ReactDOM from 'react-dom';
@@ -7,7 +6,6 @@ import { createContainer } from 'meteor/react-meteor-data';
 
 
 import Navigation from './Navigation.jsx';
-import NewMessage from './NewMessage.jsx';
 
 
 // Message template
@@ -16,6 +14,7 @@ import Message from './Message.jsx';
 //-->
 import MessagesList from '../containers/messagesList.js'; /////<---
 
+import NewMessage from '../containers/newMessage.js'; ///<-------'./NewMessage.jsx';
 
 import AccountsUIWrapper from './AccountsUIWrapper.jsx';
 
@@ -51,4 +50,3 @@ const Layout = ({content = () => null }) => (
 
 
 export default Layout;
-//*/

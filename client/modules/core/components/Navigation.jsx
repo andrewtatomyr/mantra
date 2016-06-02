@@ -19,8 +19,8 @@ class Navigation extends React.Component {
 
   renderLocations() {
 
-    return this.getLocations().map((location) => (
-      <Location key={location._id} location={location} />
+    return this.getLocations().map((userLocation) => (
+      <Location key={userLocation._id} userLocation={userLocation} />
     ));
   }
 

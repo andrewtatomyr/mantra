@@ -6,23 +6,20 @@ class NewMessage extends React.Component {
     super(props);
   }
 
-  handleSubmit(event) {
+  _create(event) {
     event.preventDefault();
-
-    const text = ReactDOM.findDOMNode(this.refs.textInput).value.trim();
-
-    let location = FlowRouter.getParam('location');
-    Meteor.call('messages.insert', text,  location);
-    ReactDOM.findDOMNode(this.refs.textInput).value = "";
+    const text = this.refs.textInput.value.trim();
+    const userLocation = FlowRouter.getParam("userLocation");
+    const {create} = this.props;
+    create(text, userLocation);
+    this.refs.textInput.value = '';
   }
 
 
   render() {
 
-    console.log(Meteor.user());
-    
-    return FlowRouter.getParam('location') /*&& Meteor.user()*/ ? (
-      <form className="new-message" onSubmit={this.handleSubmit.bind(this)}>
+    return FlowRouter.getParam('userLocation') /*&& Meteor.user()*/ ? (
+      <form className="new-message" onSubmit={this._create.bind(this)}>
         <input
           type="text"
           placeholder="Type new message here..."

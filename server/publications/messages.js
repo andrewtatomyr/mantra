@@ -3,10 +3,8 @@ import {Meteor} from 'meteor/meteor';
 import {check} from 'meteor/check';
 
 
-
-
-Meteor.publish("messages", (location) => {
-  return Messages.find({location});
+Meteor.publish("messages", (userLocation) => {
+  return Messages.find({userLocation});
 });
 
 Meteor.publish("userParams", () => {
