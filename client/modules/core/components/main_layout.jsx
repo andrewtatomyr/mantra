@@ -5,6 +5,11 @@ import { Meteor } from 'meteor/meteor';
 import { createContainer } from 'meteor/react-meteor-data';
 
 
+
+import Profile from '../../profile/containers/profile.js'; ///<---
+
+
+
 import Navigation from './Navigation.jsx';
 
 
@@ -19,14 +24,22 @@ import NewMessage from '../containers/newMessage.js'; ///<-------'./NewMessage.j
 import AccountsUIWrapper from './AccountsUIWrapper.jsx';
 
 
-const Layout = ({content = () => null }) => (
+const Layout = () => (
   <div className="container">
     <header>
       <h1>Messaging</h1>
 
+
+      <div className="profile-wrapper">
+        <Profile/>
+      </div>
+
+
+
       <div className="profile-wrapper">
         <AccountsUIWrapper />
       </div>
+
 
       <div className="location-wrapper">
         <Navigation/>

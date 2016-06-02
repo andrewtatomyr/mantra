@@ -11,6 +11,10 @@ export const composer = ({context}, onData) => {
 
   if (Meteor.subscribe('messages', userLocation).ready()) {
     const messages = Collections.Messages.find({}, { sort: { createdAt: -1 } }).fetch();
+
+    console.log(messages);
+
+
     onData(null, {messages});
   }
 };
