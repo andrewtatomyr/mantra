@@ -29,8 +29,10 @@ class Navigation extends React.Component {
   }
 
   render() {
+    const userLocation = FlowRouter.getParam("userLocation");
+    console.log(userLocation);
     return (
-        <select ref="locationInput" onChange={this.updateLocation.bind(this)} >
+        <select ref="locationInput" defaultValue={userLocation} onChange={this.updateLocation.bind(this)} >
           {this.renderLocations()}
         </select>
     );

@@ -12,7 +12,7 @@ class Profile extends React.Component {
 
     const {nameInput, emailInput} = this.refs;
 
-
+    console.log(`[props]`);
     console.log(this.props);
 
     const {updateProfile, toggle} = this.props; // !

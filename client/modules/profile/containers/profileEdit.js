@@ -14,7 +14,7 @@ export const composer = ({context }, onData) => {
 
 
 
-  if (Meteor.subscribe('userParams').ready()) {
+  if (Meteor.subscribe('currentUser').ready()) {
     const currentUser = /*Collections.*/Meteor.user(); //?
 
     console.log(currentUser);
