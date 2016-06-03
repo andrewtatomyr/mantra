@@ -43,7 +43,7 @@ const Layout = () => (
 
 
       <div className="location-wrapper">
-        <Navigation/>
+        <Navigation />
       </div>
 
 

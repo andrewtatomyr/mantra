@@ -8,7 +8,7 @@ export default class userLocation extends Component {
   }
   render() {
     return (
-      <option >
+      <option value={this.props.userLocation._id} >
         {this.props.userLocation.locationName}
       </option>
     );
