@@ -12,8 +12,13 @@ class Profile extends React.Component {
 
     const {nameInput, emailInput} = this.refs;
 
-    const {updateProfile} = this.props; // !
+
+    console.log(this.props);
+
+    const {updateProfile, toggle} = this.props; // !
     updateProfile(nameInput.value.trim(), emailInput.value); // !
+
+    toggle();
 
   }
 

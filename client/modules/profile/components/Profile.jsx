@@ -7,6 +7,7 @@ class Profile extends React.Component {
   }
 
   _toggle() {
+    console.log(this.props);
     const {toggle} = this.props;
     toggle();
   }
