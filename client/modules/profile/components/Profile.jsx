@@ -14,6 +14,10 @@ class Profile extends React.Component {
 
   render() {
 
+
+    //console.log(this.props);//-
+
+
     return true /*Meteor.user()*/ ? (
       <span className="toggle-profile" onClick={this._toggle.bind(this)}>
         &#9998;

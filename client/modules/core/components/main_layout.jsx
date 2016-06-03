@@ -7,6 +7,7 @@ import { createContainer } from 'meteor/react-meteor-data';
 
 
 import Profile from '../../profile/containers/profile.js'; ///<---
+import ProfileEdit from '../../profile/containers/profileEdit.js'; ///<---
 
 
 
@@ -44,6 +45,15 @@ const Layout = () => (
       <div className="location-wrapper">
         <Navigation/>
       </div>
+
+
+
+      <div className="profileEdit-wrapper">
+        <ProfileEdit/>
+      </div>
+
+
+
 
       <div className="new-message-wrapper">
         <NewMessage />
