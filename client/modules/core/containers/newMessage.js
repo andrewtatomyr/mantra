@@ -4,18 +4,8 @@ import {
 import Component from '../components/NewMessage';
 
 
-
-
-
-
-
-
-
 export const composer = ({context }, onData) => {
-
-
   const {Meteor, Collections/*??*/} = context();
-
 
   if (Meteor.subscribe('currentUser').ready()) {
     const currentUser = /*Collections.*/Meteor.user(); //?
@@ -23,15 +13,10 @@ export const composer = ({context }, onData) => {
     console.log("[newMessage] : ");
     console.log(currentUser);
 
-
     onData(null, {currentUser});
   }
 
 };
-
-
-
-
 
 
 export const depsMapper = (context, actions) => ({

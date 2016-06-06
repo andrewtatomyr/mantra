@@ -15,10 +15,6 @@ class Profile extends React.Component {
 
   render() {
 
-
-    //console.log(this.props);//-
-
-
     return Meteor.user() ? (
       <span className="toggle-profile" onClick={this._toggle.bind(this)}>
         &#9998;
@@ -26,7 +22,6 @@ class Profile extends React.Component {
     ) : (<span></span>);
 
   }
-
 
 }
 
