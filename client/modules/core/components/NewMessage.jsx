@@ -18,7 +18,7 @@ class NewMessage extends React.Component {
 
   render() {
 
-    return FlowRouter.getParam('userLocation') /*&& Meteor.user()*/ ? (
+    return FlowRouter.getParam('userLocation') && Meteor.user() ? (
       <form className="new-message" onSubmit={this._create.bind(this)}>
         <input
           type="text"

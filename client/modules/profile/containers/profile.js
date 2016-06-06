@@ -18,12 +18,33 @@ import Component from '../components/Profile.jsx';
 
 
 
+export const composer = ({context }, onData) => {
+
+
+  const {Meteor, Collections/*??*/} = context();
+
+
+  if (Meteor.subscribe('currentUser').ready()) {
+    const currentUser = /*Collections.*/Meteor.user(); //?
+
+    //console.log("[profile] : ");
+    //console.log(currentUser);
+
+
+    onData(null, {currentUser});
+  }
+
+};
+
+
+
+
 export const depsMapper = (context, actions) => ({
   toggle: actions.profile.toggle,  // ! ??
   context: () => context  // ! ??
 });
 
 export default composeAll(
-  //composeWithTracker(composer),
+  composeWithTracker(composer),
   useDeps(depsMapper)
 )(Component);

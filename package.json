@@ -11,5 +11,9 @@
     "react-addons-pure-render-mixin": "^15.1.0",
     "react-dom": "^15.1.0",
     "react-mounter": "^1.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^2.11.1",
+    "eslint-plugin-meteor": "^3.6.0"
   }
 }
